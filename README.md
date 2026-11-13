@@ -10,7 +10,7 @@ This project focuses on developing efficient ways to schedule tasks on CPUs. We 
 
 How can we schedule a set of jobs on a single-core or multi-core processor to minimize the total waiting time for all jobs, while ensuring that jobs start only after their release times and that jobs on the same core do not overlap?
 
-![Job Scheduling Gantt Chart](images/gantt_chart.png)
+![Job Scheduling Gantt Chart](gantt_chart.png)
 
 ## Variable and Constraint Growth: Full LP vs. Greedy LP
 
@@ -23,13 +23,13 @@ Greedy LP. The greedy method divides tasks into batches of size B (e.g., B = 5) 
 
 While the full LP produces the best schedule, it does not scale well. The greedy LP sacrifices some optimality but allows for efficient large-scale scheduling by significantly reducing problem size and therefore complexity.
 
-![Variable and Constraint Growth: Full LP vs. Greedy LP](images/lp_growth.png)
+![Variable and Constraint Growth: Full LP vs. Greedy LP](lp_growth.png)
 
 ## Results
 
 Here, we ran 100 simulations for each implementation using randomized (but logically sound) parameter values. We then compared the efficiency of each implementation by evaluating the total wait time in each simulation and plotting the results as probability distributions.
 
-![Probability Distribution of Total Wait Times](images/wait_time_distributions.png)
+![Probability Distribution of Total Wait Times](wait_time_distributions.png)
 
 | Metric | Single (FCFS) | Multicore (Parallel) | Multicore (Batch) |
 | --- | --- | --- | --- |
